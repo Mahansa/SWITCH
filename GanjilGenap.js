@@ -27,10 +27,10 @@ platNomor.forEach(function(plat) {
             return;
     }
 
-    // Cek apakah tanggalnya ganjil/genap
+   
     let jenisTanggal = (tanggalHariIni % 2 === 0) ? 'GENAP' : 'GANJIL';
 
-    // Logika ganjil-genap
+ 
     let bolehMelintas = (jenisPlat === jenisTanggal) ? 'BOLEH' : 'TIDAK BOLEH';
 
     console.log(`${plat} adalah plat ${jenisPlat} maka ${bolehMelintas} melintas karena ini tanggal ${tanggalHariIni}`);
