@@ -33,5 +33,5 @@ platNomor.forEach(function(plat) {
  
     let bolehMelintas = (jenisPlat === jenisTanggal) ? 'BOLEH' : 'TIDAK BOLEH';
 
-    console.log(`${plat} adalah plat ${jenisPlat} maka ${bolehMelintas} melintas karena ini tanggal ${tanggalHariIni}`);
+    console.log(`${plat} adalah plat ${jenisPlat} maka ${bolehMelintas} melintas karena hari ini tanggal ${tanggalHariIni}`);
 });
