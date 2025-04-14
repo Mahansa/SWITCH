@@ -23,8 +23,6 @@ platNomor.forEach(function(plat) {
             jenisPlat = 'GANJIL';
             break;
         default:
-            console.log(`${plat} tidak valid`);
-            return;
     }
 
    
