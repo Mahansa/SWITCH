@@ -1,8 +1,11 @@
-let platNomor = ['B 2597 BTC'];
+let platNomor = ['B 2935 BTC', 'B 1234 ABC', 'B 5679 XYZ'];
+
+let tanggalHariIni = 11;
 
 platNomor.forEach(function(plat) {
     let angka = plat.split(' ')[1]; 
     let angkaTerakhir = angka[angka.length - 1]; 
+    let jenisPlat = '';
 
     switch (angkaTerakhir) {
         case '0':
@@ -10,15 +13,25 @@ platNomor.forEach(function(plat) {
         case '4':
         case '6':
         case '8':
-            console.log(`${plat} adalah plat GENAP`);
+            jenisPlat = 'GENAP';
             break;
         case '1':
         case '3':
         case '5':
         case '7':
         case '9':
-            console.log(`${plat} adalah plat GANJIL`);
+            jenisPlat = 'GANJIL';
             break;
         default:
+            console.log(`${plat} tidak valid`);
+            return;
     }
+
+    // Cek apakah tanggalnya ganjil/genap
+    let jenisTanggal = (tanggalHariIni % 2 === 0) ? 'GENAP' : 'GANJIL';
+
+    // Logika ganjil-genap
+    let bolehMelintas = (jenisPlat === jenisTanggal) ? 'BOLEH' : 'TIDAK BOLEH';
+
+    console.log(`${plat} adalah plat ${jenisPlat} maka ${bolehMelintas} melintas karena ini tanggal ${tanggalHariIni}`);
 });
