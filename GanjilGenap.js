@@ -1,4 +1,4 @@
-let platNomor = ['B 2597 XYZ'];
+let platNomor = ['B 2597 BTC'];
 
 platNomor.forEach(function(plat) {
     let angka = plat.split(' ')[1]; 
