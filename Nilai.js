@@ -1,31 +1,27 @@
-let grade = [ 
-    { nama : "aldien", grade : "A"},
-    { nama : "Gani", grade : "B"},
-    { nama : "Mahansa", grade : "B"},
-    { nama : "Silvesman", grade : "F"}
+let DaftarSiswa = [ 
+    { nama : "aldien", nilai : 89},
+    { nama : "Gani", nilai : 76},
+    { nama : "Mahansa", nilai : 100},
+    { nama : "Silvesman", nilai : 73}
 ];
 
-grade.forEach(function(item) {
-    let hasilGrade = "";
-
-    switch (item.grade) {
-        case "A":
-            hasilGrade = "nilai sangat baik";
+DaftarSiswa.forEach(siswa => {
+    let hasilgrade = "";
+    switch (true) {
+        case (siswa.nilai >= 90):
+            hasilgrade = "A";
             break;
-        case "B":
-            hasilGrade = "nilai baik";
+        case (siswa.nilai >= 80):
+            hasilgrade = "B";
             break;
-        case "C":
-            hasilGrade = "nilai cukup";
+        case (siswa.nilai >= 70):
+            hasilgrade = "C";
             break;
-        case "D":
-            hasilGrade = "nilai kurang baik";
-            break;
-        case "F":
-            hasilGrade = "nilai sangat kurang baik";
+        case (siswa.nilai >= 60):
+            hasilgrade = "D";
             break;
         default:
+            hasilgrade = "F";
     }
-
-    console.log(`${item.nama} mendapat ${hasilGrade}`);
+    console.log(`${siswa.nama} mendapat Grade ${hasilgrade}`);
 });
